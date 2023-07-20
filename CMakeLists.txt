@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.25)
+
+set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
+set(PROJECT_VERSION 0.0.${PATCH_VERSION})
+
+project(join_server VERSION ${PROJECT_VERSION})
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+set(DB_FILE ${CMAKE_CURRENT_SOURCE_DIR}/join_server.db)
+
+
+add_subdirectory(src)
+
