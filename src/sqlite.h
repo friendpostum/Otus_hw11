@@ -79,13 +79,6 @@ private:
         return EXIT_SUCCESS;
     }
 
-    static int print_results(void *, int columns, char **data, char **names) {
-        for (int i = 0; i < columns; ++i)
-            std::cout << names[i] << " = " << (data[i] ? data[i] : "NULL") << std::endl;
-        std::cout << std::endl;
-        return 0;
-    }
-    
     static int select (void* param, int columns, char** data, char** colName) {
         enum cort{ID_INDEX, A_INDEX, B_INDEX};
 
